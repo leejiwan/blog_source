@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "제네릭(Generic)"
+date:   2020-12-09 13:51:00 +0530
+categories: Java
+comments: true
+---
+- 클래스 내부에서 사용할 데이터 타입을 인스턴스 생성 시 지정해 줄 수 있다
+
+
+```java
+package com.kcube.test;
+
+import java.util.HashMap;
+
+class staticTest<G>
+{
+	G info;
+	HashMap<Integer, G> map1 = new HashMap<Integer, G>();
+
+	HashMap<Integer, G> excute(G info)
+	{
+		map1.put(1, info);
+		return map1;
+	}
+}
+
+public class Test3
+{
+	public static void main(String[] args)
+	{
+		staticTest<String> test = new staticTest<String>();
+		staticTest<Integer> test2 = new staticTest<Integer>();
+		System.out.println(test.excute("test"));
+        System.out.println(test2.excute("test"));// 에러발생
+		System.out.println(test2.excute(1));
+	}
+}
+
+
+```

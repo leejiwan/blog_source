@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "OpenWeatherMap"
+date:   2020-12-27 15:10:00 +0530
+categories: Javascript
+---
+
+- 오픈 API를 이용한 날씨 정보 가져오는 예제 코드(위치 및 아이콘 변경 코드는 제거)
+
+- [https://openweathermap.org][link1] 에서 apiKey 발급
+
+- 날씨 아이콘은 [https://erikflowers.github.io/weather-icons][link2]
+
+- 웹 사이트 위치 엑세스를 허용해 주어야 위도, 경도를 가져올 수 있다
+
+```javascript
+/* 날씨 정보 */
+function weatherData(obj) {
+    /* https://openweathermap.org/API */
+    var url = 'https://api.openweathermap.org/data/2.5/weather';
+    var appid = 'xxxxx'; //인증받은 key
+    $.ajax({
+        url: url,
+        dataType: "json",
+        type: "GET",
+        async: "true",//비동기
+        data : {'lat':obj.latitude, 'lon':obj.longitude, 'appid':appid}, //위도, 경도, apiKey
+        success: function(data) {
+            var temp = Math.round(data.main.temp- 273.15);
+            var $weatherDiv = $('div.weather');
+            var $weatherLocation = $('<span>').addClass('weatherCity').appendTo($weatherDiv); 
+            var $weatherIcon = $('<img>').attr('src','/assets/weatherIcons/'+icon).css({'width':'25px', 'margin':'1px 3px 0px 3px'}).appendTo($weatherDiv); 
+            var $weatherTemp = $('<span>').addClass('weatherTemp').appendTo($weatherDiv); 
+           
+            $weatherLocation.html(data.name +',&nbsp;'+ data.sys.country);     
+            $weatherTemp.html(temp + '°C');
+        }
+    })
+}
+```
+
+- 결과화면
+
+<div class="post-container">
+    <img class="servlet" src="{{site.baseurl }}/assets/weather.png" style="border:1px solid" />
+</div>
+
+[link1]: https://openweathermap.org 
+[link2]: https://erikflowers.github.io/weather-icons

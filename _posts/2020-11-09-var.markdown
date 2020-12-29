@@ -1,0 +1,59 @@
+---
+layout: post
+title:  "var, let, const"
+date:   2020-11-09 14:44:00 +0530
+categories: Javascript
+---
+
+var
+
+1. var 함수 스코프 변수 선언 시 사용
+	- 함수밖에서 사용하면 전역, 함수안에서 사용하면 지역으로 사용
+
+2. 재선언, 재할당이 가능
+
+```javascript
+var a = 1;
+
+var a = 2;
+
+console.log(a) // 2
+```
+
+let
+
+1. 블록단위에서 유효범위를 가짐({} 경계로 블록 구분)
+
+
+```javascript
+if(flag = true) {
+	let a = 0;
+}
+
+```
+
+2. 재선언이 불가능 , 재할당 가능
+
+```javascript
+let a = 1;
+
+let a = 2; //error
+
+```
+
+const
+
+1. 읽기 전용 변수, 값을 재할당 할 수 없는 상수를 선언할 경우에 사용합니다
+
+2. 블록단위에서 유효범위를 가짐({} 경계로 블록 구분)
+
+3. 재선언, 재할당 안됨
+
+```javascript
+const a = 1;
+
+a = 2;
+
+console.log(a); //error
+
+```

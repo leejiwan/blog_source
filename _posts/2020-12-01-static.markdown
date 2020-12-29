@@ -1,0 +1,110 @@
+---
+layout: post
+title:  "static(정적)"
+date:   2020-12-01 16:55:00 +0530
+categories: Java
+comments: true
+---
+static(정적)
+- static 으로 선헌한 어떠한 값이 메모리가 할당되어 프로그램이 끝날 때 까지 그 메모리 값이 유지된다
+
+
+static(정적) 변수 
+- 인스턴스 변수는 인스턴스가 생성될 때마다 생성되므로 각기 다른값을 가진다
+- 하지만 static 변수는 생성 된 모든 인스턴스에서 하나의 저장공간을 공유하기에 항상 같은 값을 가진다 
+​
+
+
+
+
+ex1)
+
+```java
+class staticTest
+{
+	int num2 = 5;
+}
+
+public class Test3
+{
+	public static void main(String[] args)
+	{
+		staticTest numTest = new staticTest();
+		staticTest numTest2 = new staticTest();
+		numTest.num2++;
+		numTest2.num2--;
+
+		System.out.println("numTest::" + numTest.num2); //6
+		System.out.println("numTest::" + numTest2.num2); //4
+        //※ 멤버 변수를각 인스턴스가 공유하지 않는다
+	}
+}
+```
+
+
+
+
+
+ex2)
+
+```java
+class staticTest
+{
+	static int num = 5;
+}
+
+public class Test3
+{
+	public static void main(String[] args)
+	{
+
+		staticTest numTest = new staticTest();
+
+		staticTest.num++;
+		staticTest.num++;
+		System.out.println("no instance ::" + staticTest.num); //7
+		System.out.println("no instance ::" + numTest.num); //7
+        //※ 멤버변수를 공유한다
+	}
+}
+```
+
+
+
+static 메소드 
+- 인스턴스의 생성 없이 호출이 가능하다 staic 없는 메소드는 생성없이 호출 불가능
+
+```java
+class staticTest
+{
+	static int num = 5;
+
+	static void execute()
+	{
+		System.out.println("no instance");
+	}
+
+	void execute2()
+	{
+		System.out.println("instance");
+	}
+}
+
+public class Test3
+{
+	public static void main(String[] args)
+	{
+
+		staticTest numTest = new staticTest();
+		numTest.execute(); //no instance
+		numTest.execute2(); //instance
+
+		staticTest.execute(); //no instance
+        staticTest.execute2(); //불가능!
+        //※ 생성자 없이 메소드를 호출가능
+	}
+}
+```
+
+static 사용이유?
+- 공용사용 정보에대해 매번 인스턴스를 생성하지 않아도 빠르게 접근이 가능해 효율을 높이기 위해 사용한다

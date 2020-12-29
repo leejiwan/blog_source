@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Servlet 생명주기"
+date:   2020-12-24 16:15:00 +0530
+categories: Was, Java
+comments: true
+---
+
+- Servlet 동작원리
+<div class="post-container">
+    <img class="servlet" src="{{site.baseurl }}/assets/servletLifeCycle.png" />
+</div>
+
+- Servlet Container
+
+1. 클라이언트가 요청을 보내면 HTTP Request를 Servlet Conatiner로 전송
+
+2. HttpServletRequest, HttpServletResponse 두 객체를 생성
+
+3. web.xml에 해당 요청에 해당하는 servlet을 메모리에 올림 (init())
+
+4. 해당 서블릿에서 POST, GET여부에 따라 doGet() 또는 doPost()를 호출 (doGet(), doPost())
+
+5. 동적 페이지를 생성한 후 HttpServletResponse객체에 응답을 전송
+
+6. 응답이 완료하면 HttpServletRequest, HttpServletResponse 두 객체를 소멸 (destory())

@@ -1,0 +1,87 @@
+---
+layout: post
+title:  "super"
+date:   2020-12-09 14:44:00 +0530
+categories: Java
+comments: true
+---
+
+- super 키워드를 사용할 시 부모 클래스의 변수를 참조함
+- 같은 변수같은 경우 String color의 경우는 자식 클래스의 지역변수를 출력함
+
+```java
+class car
+{
+	int engine = 3;
+	int wheel = 2;
+	String color = "gray";
+}
+
+class sonata extends car
+{
+	String color = "red";
+
+	void excute() throws Exception
+	{
+		System.out.println(super.engine); //3
+		System.out.println(super.wheel); //2
+		System.out.println(this.color); //red
+		System.out.println(super.color); //gray
+	}
+}
+
+public class Test3
+{
+	public static void main(String[] args) throws Exception
+	{
+		sonata s = new sonata();
+		s.excute();
+	}
+}
+
+
+```
+
+- super() 부모 클래스 변수 초기화
+
+
+```java
+class car
+{
+	int engine = 3;
+	int wheel = 2;
+	String color = "gray";
+
+	car(String color)
+	{
+		this.color = color;
+	}
+}
+
+class sonata extends car
+{
+
+	sonata()
+	{
+		super("green");
+	}
+
+	void excute() throws Exception
+	{
+		System.out.println(this.color); //green
+		System.out.println(this.engine); //3
+		System.out.println(this.wheel); //2
+	}
+}
+
+public class Test3
+{
+	public static void main(String[] args) throws Exception
+	{
+		sonata s = new sonata();
+		s.excute();
+	}
+}
+
+```
+
