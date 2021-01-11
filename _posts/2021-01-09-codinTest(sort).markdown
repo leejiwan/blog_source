@@ -3,6 +3,7 @@ layout: post
 title:  "K 번째 수"
 date:   2021-01-09 10:21:00 +0530
 categories: Java
+comments: true
 ---
 
 
