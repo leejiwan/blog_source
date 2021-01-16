@@ -3,6 +3,7 @@ layout: post
 title:  "BGF 리테일 시스템 운영 직무(경력직) 면접 후기"
 date:   2020-12-28 20:15:00 +0530
 categories: Interview
+comments: true
 ---
 
 <div class="post-container">
