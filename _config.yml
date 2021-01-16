@@ -131,7 +131,7 @@ pagination:
   indexpage: 'index'
 
 ############################################################
-
+siteUrl: https://leejiwan.github.io
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate-v2
