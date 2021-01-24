@@ -7,4 +7,5 @@ gem "slugify", "~> 1.0"
 
 group :jekyll_plugins do
     gem "jekyll-paginate-v2"
+    gem "jekyll-sitemap"
 end

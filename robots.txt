@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://leejiwan.github.io/sitemap.xml
+Sitemap: http://leejiwan.github.io/sitemap.xml
