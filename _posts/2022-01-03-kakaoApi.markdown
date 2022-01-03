@@ -1,0 +1,29 @@
+---
+layout: post
+title: "kakao api"
+date: 2022-01-03 13:43:00 +0530
+categories: Javascript
+comments: true
+---
+
+- kakao 오픈 API를 이용한 날씨 정보 가져오는 예제 코드
+
+<div class="post-container">
+    <img class="kakao1" src="{{site.baseurl }}/assets/kakaoApi1.png" />
+</div>
+
+```javascript
+var kakaoAuth = ""; //kakao restApikey
+function loadDoc() {
+  $.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v2/search/image?",
+    data: { query: "가스공사" },
+    headers: { Authorization: "KakaoAK " + kakaoAuth },
+  })
+    .done(function (msg) {
+      alert("Data Saved: " + msg);
+    })
+    .fail(function (error) {});
+}
+```
