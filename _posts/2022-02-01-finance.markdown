@@ -1,0 +1,13 @@
+---
+layout: post
+title: "금융용어 정리"
+date: 2022-02-01 14:34:00 +0530
+categories: Finance
+comments: true
+---
+
+1.기준금리
+
+2.가산금리
+
+3.우대금리
