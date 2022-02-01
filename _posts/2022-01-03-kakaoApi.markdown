@@ -6,10 +6,31 @@ categories: Javascript
 comments: true
 ---
 
-- kakao 오픈 API를 이용한 날씨 정보 가져오는 예제 코드
+- kakao 오픈 API 이용 및 테스트
 
+1. kakao api 키 확인
 <div class="post-container">
     <img class="kakao1" src="{{site.baseurl }}/assets/kakaoApi1.png" />
+</div>
+
+2. postman으로 통신 확인
+
+-쿼리스트링 SET
+
+<div class="post-container">
+    <img class="kakao2" src="{{site.baseurl }}/assets/kakaoApi2.png" />
+</div>
+
+-키 값 SET
+
+<div class="post-container">
+    <img class="kakao3" src="{{site.baseurl }}/assets/kakaoApi3.jpg" />
+</div>
+
+-OUT 확인
+
+<div class="post-container">
+    <img class="kakao4" src="{{site.baseurl }}/assets/kakaoApi4.png" />
 </div>
 
 ```javascript
