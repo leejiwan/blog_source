@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>제네릭(Generic)</title>
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>제네릭(Generic)</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="제네릭(Generic)" />
+<meta name="author" content="GitHub User" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="클래스 내부에서 사용할 데이터 타입을 인스턴스 생성 시 지정해 줄 수 있다" />
+<meta property="og:description" content="클래스 내부에서 사용할 데이터 타입을 인스턴스 생성 시 지정해 줄 수 있다" />
+<link rel="canonical" href="http://localhost:4000/generic/" />
+<meta property="og:url" content="http://localhost:4000/generic/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-09T17:21:00+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/generic/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/generic/"},"author":{"@type":"Person","name":"GitHub User"},"headline":"제네릭(Generic)","dateModified":"2020-12-09T17:21:00+09:00","datePublished":"2020-12-09T17:21:00+09:00","description":"클래스 내부에서 사용할 데이터 타입을 인스턴스 생성 시 지정해 줄 수 있다","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- bootStrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- 날씨 -->
+<script type="text/javascript" src="/assets/js/weather.js"></script>
+<style type="text/css">
+.pagNav{text-align: center;}
+footer {display: none; }
+.profile{color:black;display:inline;margin-left:4px;}
+</style>
+</head><!-- 왼쪽 메뉴 -->
+<body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header condensed">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/lee.jpg" alt="Junior Developer" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Junior Developer</a>
+      </h2>
+      </div></div>
+      
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </section>
+    <section class="content">
+      <!-- 조회 --><div class="post-container">
+  <a class="post-link" href="/generic/">
+    <h2 class="post-title">제네릭(Generic)</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Dec 9, 2020</div><ul class="post-categories"><li>Java</li></ul></div>
+  <div class="post">
+    <ul>
+  <li>클래스 내부에서 사용할 데이터 타입을 인스턴스 생성 시 지정해 줄 수 있다</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">kcube</span><span class="o">.</span><span class="na">test</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+
+<span class="kd">class</span> <span class="nc">staticTest</span><span class="o">&lt;</span><span class="n">G</span><span class="o">&gt;</span>
+<span class="o">{</span>
+	<span class="n">G</span> <span class="n">info</span><span class="o">;</span>
+	<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">G</span><span class="o">&gt;</span> <span class="n">map1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">G</span><span class="o">&gt;();</span>
+
+	<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">G</span><span class="o">&gt;</span> <span class="nf">excute</span><span class="o">(</span><span class="n">G</span> <span class="n">info</span><span class="o">)</span>
+	<span class="o">{</span>
+		<span class="n">map1</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">info</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">map1</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test3</span>
+<span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+	<span class="o">{</span>
+		<span class="n">staticTest</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">staticTest</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+		<span class="n">staticTest</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">test2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">staticTest</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">test</span><span class="o">.</span><span class="na">excute</span><span class="o">(</span><span class="s">"test"</span><span class="o">));</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">test2</span><span class="o">.</span><span class="na">excute</span><span class="o">(</span><span class="s">"test"</span><span class="o">));</span><span class="c1">// 에러발생</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">test2</span><span class="o">.</span><span class="na">excute</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+
+</code></pre></div></div>
+
+  </div><script>
+    console.log('sdgsdg22')
+  </script><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/generic/';
+      this.page.identifier = 'http://localhost:4000/generic';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://leejiwan.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+    <footer class="condensed">
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </footer>
+  </main>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0WSKB02P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TH0WSKB02P');
+  </script>
+</body>
+
+</html>

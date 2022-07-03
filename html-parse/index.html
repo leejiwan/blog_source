@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>HTML paresing</title>
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>HTML paresing</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="HTML paresing" />
+<meta name="author" content="GitHub User" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="jsoup 은 html parse 라이브러리" />
+<meta property="og:description" content="jsoup 은 html parse 라이브러리" />
+<link rel="canonical" href="http://localhost:4000/html-parse/" />
+<meta property="og:url" content="http://localhost:4000/html-parse/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-24T12:27:00+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/html-parse/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/html-parse/"},"author":{"@type":"Person","name":"GitHub User"},"headline":"HTML paresing","dateModified":"2020-11-24T12:27:00+09:00","datePublished":"2020-11-24T12:27:00+09:00","description":"jsoup 은 html parse 라이브러리","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- bootStrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- 날씨 -->
+<script type="text/javascript" src="/assets/js/weather.js"></script>
+<style type="text/css">
+.pagNav{text-align: center;}
+footer {display: none; }
+.profile{color:black;display:inline;margin-left:4px;}
+</style>
+</head><!-- 왼쪽 메뉴 -->
+<body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header condensed">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/lee.jpg" alt="Junior Developer" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Junior Developer</a>
+      </h2>
+      </div></div>
+      
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </section>
+    <section class="content">
+      <!-- 조회 --><div class="post-container">
+  <a class="post-link" href="/html-parse/">
+    <h2 class="post-title">HTML paresing</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Nov 24, 2020</div><ul class="post-categories"><li>Java</li></ul></div>
+  <div class="post">
+    <p>jsoup 은 html parse 라이브러리</p>
+
+<p>Dom구조를 추적하여 원하는 정보를 찾아올 수 있다</p>
+
+<p><a href="https://jsoup.org/download">라이브러리 다운로드</a></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="n">JSONArray</span> <span class="nf">getATagValue</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span>
+	<span class="o">{</span>
+		<span class="c1">// content html parsing</span>
+		<span class="n">Document</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">Jsoup</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+		<span class="n">Elements</span> <span class="n">aTag</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">select</span><span class="o">(</span><span class="s">"a"</span><span class="o">);</span>
+		<span class="n">JSONArray</span> <span class="n">jArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONArray</span><span class="o">();</span>
+		<span class="k">for</span> <span class="o">(</span><span class="n">Element</span> <span class="n">e</span> <span class="o">:</span> <span class="n">aTag</span><span class="o">)</span>
+		<span class="o">{</span> <span class="c1">// a 태그 중 href 속성이 있는것만 돌려준다</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">attr</span><span class="o">(</span><span class="s">"href"</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+			<span class="o">{</span>
+				<span class="n">JSONObject</span> <span class="n">jObj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="o">();</span>
+				<span class="n">jObj</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"href"</span><span class="o">,</span> <span class="n">e</span><span class="o">.</span><span class="na">attr</span><span class="o">(</span><span class="s">"href"</span><span class="o">));</span>
+				<span class="n">jObj</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"text"</span><span class="o">,</span> <span class="n">e</span><span class="o">.</span><span class="na">text</span><span class="o">());</span>
+				<span class="n">jArray</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">jObj</span><span class="o">);</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="n">jArray</span><span class="o">;</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+
+  </div><script>
+    console.log('sdgsdg22')
+  </script><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/html-parse/';
+      this.page.identifier = 'http://localhost:4000/html%20parse';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://leejiwan.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+    <footer class="condensed">
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </footer>
+  </main>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0WSKB02P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TH0WSKB02P');
+  </script>
+</body>
+
+</html>

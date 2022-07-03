@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>static(정적)</title>
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>static(정적)</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="static(정적)" />
+<meta name="author" content="GitHub User" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="static(정적) static 으로 선헌한 어떠한 값이 메모리가 할당되어 프로그램이 끝날 때 까지 그 메모리 값이 유지된다" />
+<meta property="og:description" content="static(정적) static 으로 선헌한 어떠한 값이 메모리가 할당되어 프로그램이 끝날 때 까지 그 메모리 값이 유지된다" />
+<link rel="canonical" href="http://localhost:4000/static/" />
+<meta property="og:url" content="http://localhost:4000/static/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-01T20:25:00+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/static/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/static/"},"author":{"@type":"Person","name":"GitHub User"},"headline":"static(정적)","dateModified":"2020-12-01T20:25:00+09:00","datePublished":"2020-12-01T20:25:00+09:00","description":"static(정적) static 으로 선헌한 어떠한 값이 메모리가 할당되어 프로그램이 끝날 때 까지 그 메모리 값이 유지된다","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- bootStrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- 날씨 -->
+<script type="text/javascript" src="/assets/js/weather.js"></script>
+<style type="text/css">
+.pagNav{text-align: center;}
+footer {display: none; }
+.profile{color:black;display:inline;margin-left:4px;}
+</style>
+</head><!-- 왼쪽 메뉴 -->
+<body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header condensed">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/lee.jpg" alt="Junior Developer" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Junior Developer</a>
+      </h2>
+      </div></div>
+      
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </section>
+    <section class="content">
+      <!-- 조회 --><div class="post-container">
+  <a class="post-link" href="/static/">
+    <h2 class="post-title">static(정적)</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Dec 1, 2020</div><ul class="post-categories"><li>Java</li></ul></div>
+  <div class="post">
+    <p>static(정적)</p>
+<ul>
+  <li>static 으로 선헌한 어떠한 값이 메모리가 할당되어 프로그램이 끝날 때 까지 그 메모리 값이 유지된다</li>
+</ul>
+
+<p>static(정적) 변수</p>
+<ul>
+  <li>인스턴스 변수는 인스턴스가 생성될 때마다 생성되므로 각기 다른값을 가진다</li>
+  <li>하지만 static 변수는 생성 된 모든 인스턴스에서 하나의 저장공간을 공유하기에 항상 같은 값을 가진다 
+​</li>
+</ul>
+
+<p>ex1)</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">staticTest</span>
+<span class="o">{</span>
+	<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test3</span>
+<span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+	<span class="o">{</span>
+		<span class="n">staticTest</span> <span class="n">numTest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">staticTest</span><span class="o">();</span>
+		<span class="n">staticTest</span> <span class="n">numTest2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">staticTest</span><span class="o">();</span>
+		<span class="n">numTest</span><span class="o">.</span><span class="na">num2</span><span class="o">++;</span>
+		<span class="n">numTest2</span><span class="o">.</span><span class="na">num2</span><span class="o">--;</span>
+
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"numTest::"</span> <span class="o">+</span> <span class="n">numTest</span><span class="o">.</span><span class="na">num2</span><span class="o">);</span> <span class="c1">//6</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"numTest::"</span> <span class="o">+</span> <span class="n">numTest2</span><span class="o">.</span><span class="na">num2</span><span class="o">);</span> <span class="c1">//4</span>
+        <span class="c1">//※ 멤버 변수를각 인스턴스가 공유하지 않는다</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>ex2)</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">staticTest</span>
+<span class="o">{</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test3</span>
+<span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+	<span class="o">{</span>
+
+		<span class="n">staticTest</span> <span class="n">numTest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">staticTest</span><span class="o">();</span>
+
+		<span class="n">staticTest</span><span class="o">.</span><span class="na">num</span><span class="o">++;</span>
+		<span class="n">staticTest</span><span class="o">.</span><span class="na">num</span><span class="o">++;</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"no instance ::"</span> <span class="o">+</span> <span class="n">staticTest</span><span class="o">.</span><span class="na">num</span><span class="o">);</span> <span class="c1">//7</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"no instance ::"</span> <span class="o">+</span> <span class="n">numTest</span><span class="o">.</span><span class="na">num</span><span class="o">);</span> <span class="c1">//7</span>
+        <span class="c1">//※ 멤버변수를 공유한다</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>static 메소드</p>
+<ul>
+  <li>인스턴스의 생성 없이 호출이 가능하다 staic 없는 메소드는 생성없이 호출 불가능</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">staticTest</span>
+<span class="o">{</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+
+	<span class="kd">static</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">()</span>
+	<span class="o">{</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"no instance"</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="kt">void</span> <span class="nf">execute2</span><span class="o">()</span>
+	<span class="o">{</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"instance"</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test3</span>
+<span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+	<span class="o">{</span>
+
+		<span class="n">staticTest</span> <span class="n">numTest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">staticTest</span><span class="o">();</span>
+		<span class="n">numTest</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span> <span class="c1">//no instance</span>
+		<span class="n">numTest</span><span class="o">.</span><span class="na">execute2</span><span class="o">();</span> <span class="c1">//instance</span>
+
+		<span class="n">staticTest</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span> <span class="c1">//no instance</span>
+        <span class="n">staticTest</span><span class="o">.</span><span class="na">execute2</span><span class="o">();</span> <span class="c1">//불가능!</span>
+        <span class="c1">//※ 생성자 없이 메소드를 호출가능</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>static 사용이유?</p>
+<ul>
+  <li>공용사용 정보에대해 매번 인스턴스를 생성하지 않아도 빠르게 접근이 가능해 효율을 높이기 위해 사용한다</li>
+</ul>
+
+  </div><script>
+    console.log('sdgsdg22')
+  </script><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/static/';
+      this.page.identifier = 'http://localhost:4000/static';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://leejiwan.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+    <footer class="condensed">
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </footer>
+  </main>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0WSKB02P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TH0WSKB02P');
+  </script>
+</body>
+
+</html>

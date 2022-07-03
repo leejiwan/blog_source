@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>접근제어자 개념</title>
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>접근제어자 개념</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="접근제어자 개념" />
+<meta name="author" content="GitHub User" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="public : 외부 공개 어디서든 접근가능" />
+<meta property="og:description" content="public : 외부 공개 어디서든 접근가능" />
+<link rel="canonical" href="http://localhost:4000/access-modifier/" />
+<meta property="og:url" content="http://localhost:4000/access-modifier/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-26T00:53:00+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/access-modifier/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/access-modifier/"},"author":{"@type":"Person","name":"GitHub User"},"headline":"접근제어자 개념","dateModified":"2020-11-26T00:53:00+09:00","datePublished":"2020-11-26T00:53:00+09:00","description":"public : 외부 공개 어디서든 접근가능","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- bootStrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- 날씨 -->
+<script type="text/javascript" src="/assets/js/weather.js"></script>
+<style type="text/css">
+.pagNav{text-align: center;}
+footer {display: none; }
+.profile{color:black;display:inline;margin-left:4px;}
+</style>
+</head><!-- 왼쪽 메뉴 -->
+<body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header condensed">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/lee.jpg" alt="Junior Developer" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Junior Developer</a>
+      </h2>
+      </div></div>
+      
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </section>
+    <section class="content">
+      <!-- 조회 --><div class="post-container">
+  <a class="post-link" href="/access-modifier/">
+    <h2 class="post-title">접근제어자 개념</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Nov 26, 2020</div><ul class="post-categories"><li>Java</li></ul></div>
+  <div class="post">
+    <ul>
+  <li>
+    <p>public : 외부 공개 어디서든 접근가능</p>
+  </li>
+  <li>
+    <p>private : 선언 된 클래스 안에서 사용 외부에서 접근 불가(정보은닉)</p>
+  </li>
+  <li>
+    <p>default : 같은 패키지 내에서 접근가능 외부 패키지에서 접근 불가</p>
+  </li>
+  <li>
+    <p>protect : 같은 패키지내에서는 모두 접근이 가능하나 다른패키지에서는 자식클래스만 접근 가능</p>
+  </li>
+</ul>
+
+<p>​</p>
+
+  </div><script>
+    console.log('sdgsdg22')
+  </script><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/access-modifier/';
+      this.page.identifier = 'http://localhost:4000/access%20modifier';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://leejiwan.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+    <footer class="condensed">
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </footer>
+  </main>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0WSKB02P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TH0WSKB02P');
+  </script>
+</body>
+
+</html>
