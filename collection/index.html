@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Collection</title>
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Collection</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Collection" />
+<meta name="author" content="GitHub User" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Set : 순서를 유지하지 않는 데이터의 집합, 데이터의 중복을 허용하지 않는다." />
+<meta property="og:description" content="Set : 순서를 유지하지 않는 데이터의 집합, 데이터의 중복을 허용하지 않는다." />
+<link rel="canonical" href="http://localhost:4000/collection/" />
+<meta property="og:url" content="http://localhost:4000/collection/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-04T20:35:00+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/collection/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/collection/"},"author":{"@type":"Person","name":"GitHub User"},"headline":"Collection","dateModified":"2020-11-04T20:35:00+09:00","datePublished":"2020-11-04T20:35:00+09:00","description":"Set : 순서를 유지하지 않는 데이터의 집합, 데이터의 중복을 허용하지 않는다.","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- bootStrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- 날씨 -->
+<script type="text/javascript" src="/assets/js/weather.js"></script>
+<style type="text/css">
+.pagNav{text-align: center;}
+footer {display: none; }
+.profile{color:black;display:inline;margin-left:4px;}
+</style>
+</head><!-- 왼쪽 메뉴 -->
+<body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header condensed">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/lee.jpg" alt="Junior Developer" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Junior Developer</a>
+      </h2>
+      </div></div>
+      
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </section>
+    <section class="content">
+      <!-- 조회 --><div class="post-container">
+  <a class="post-link" href="/collection/">
+    <h2 class="post-title">Collection</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Nov 4, 2020</div><ul class="post-categories"><li>Java</li></ul></div>
+  <div class="post">
+    <ol>
+  <li>
+    <p>Set  : 순서를 유지하지 않는 데이터의 집합, 데이터의 중복을 허용하지 않는다.</p>
+
+    <p>1-1.HashSet</p>
+    <ul>
+      <li>가장빠른 임의 접근 속도</li>
+      <li>순서를 예측 불가</li>
+    </ul>
+
+    <p>1-2.TreeSet</p>
+    <ul>
+      <li>정렬방법을 지정할 수 있음</li>
+    </ul>
+  </li>
+  <li>
+    <p>List  : 순서가 있는 데이터의 집합, 데이터의 중복을 허용한다.</p>
+
+    <p>2-1.LinkedList</p>
+    <ul>
+      <li>양방향 포인터 구조로 데이터의 삽입, 삭제가 빈번할 경우 데이터의 위치정보만 수정하면 되기에 유용</li>
+      <li>스택, 큐, 양방향 큐 등을 만들기 위한 용도로 쓰임</li>
+    </ul>
+
+    <p>2-2.Vector</p>
+    <ul>
+      <li>과거에 대용량 처리를 위해 사용했으며, 내부에서 자동으로 동기화처리가 일어나 비교적 성능이 좋지 않고 무거워 잘 쓰이지 않음</li>
+    </ul>
+
+    <p>2-3.ArrayList</p>
+    <ul>
+      <li>단방향 포인터 구조로 각 데이터에 대한 인덱스를 가지고 있어 조회 기능에 성능이 뛰어남</li>
+    </ul>
+  </li>
+</ol>
+
+<p>​</p>
+<ol>
+  <li>
+    <p>Map  :키(Key), 값(Value)의 쌍으로 이루어진 데이터 집합</p>
+
+    <p>3-1.Hashtable</p>
+    <ul>
+      <li>HashMap보다는 느리지만 동기화 지원</li>
+      <li>null불가</li>
+    </ul>
+
+    <p>3-2.HashMap</p>
+    <ul>
+      <li>중복과 순서가 허용되지 않으며 null값이 올 수 있다.</li>
+    </ul>
+
+    <p>3.3.TreeMap</p>
+    <ul>
+      <li>정렬된 순서대로 키(Key)와 값(Value)을 저장하여 검색이 빠름</li>
+    </ul>
+  </li>
+</ol>
+
+  </div><script>
+    console.log('sdgsdg22')
+  </script><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/collection/';
+      this.page.identifier = 'http://localhost:4000/collection';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://leejiwan.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+    <footer class="condensed">
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </footer>
+  </main>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0WSKB02P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TH0WSKB02P');
+  </script>
+</body>
+
+</html>

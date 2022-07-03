@@ -10,7 +10,6 @@ jekyll pagination v2를 github에서 지원하지 않아 소스를 분리해서 
 
 3.google analytics
 
-
 **2020.12.25**
 
 1.페이징 처리
@@ -25,8 +24,10 @@ jekyll pagination v2를 github에서 지원하지 않아 소스를 분리해서 
 
 - 댓글 Dispus
 
-- google analytics
+local 환경SET
+bundle exec jekyll serve
 
+- google analytics
 
 **2020.12.25**
 
@@ -39,4 +40,5 @@ jekyll pagination v2를 github에서 지원하지 않아 소스를 분리해서 
 - 불필요 파일 제거
 
 **2020.01.24**
+
 - 구글 웹 크롤링 sitemap.xml 추가

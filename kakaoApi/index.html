@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>kakao api</title>
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>kakao api</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="kakao api" />
+<meta name="author" content="GitHub User" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="kakao 오픈 API 이용 및 테스트" />
+<meta property="og:description" content="kakao 오픈 API 이용 및 테스트" />
+<link rel="canonical" href="http://localhost:4000/kakaoApi/" />
+<meta property="og:url" content="http://localhost:4000/kakaoApi/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-03T17:13:00+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/kakaoApi/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/kakaoApi/"},"author":{"@type":"Person","name":"GitHub User"},"headline":"kakao api","dateModified":"2022-01-03T17:13:00+09:00","datePublished":"2022-01-03T17:13:00+09:00","description":"kakao 오픈 API 이용 및 테스트","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- bootStrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- 날씨 -->
+<script type="text/javascript" src="/assets/js/weather.js"></script>
+<style type="text/css">
+.pagNav{text-align: center;}
+footer {display: none; }
+.profile{color:black;display:inline;margin-left:4px;}
+</style>
+</head><!-- 왼쪽 메뉴 -->
+<body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header condensed">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/lee.jpg" alt="Junior Developer" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Junior Developer</a>
+      </h2>
+      </div></div>
+      
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </section>
+    <section class="content">
+      <!-- 조회 --><div class="post-container">
+  <a class="post-link" href="/kakaoApi/">
+    <h2 class="post-title">kakao api</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Jan 3, 2022</div><ul class="post-categories"><li>Javascript</li></ul></div>
+  <div class="post">
+    <ul>
+  <li>kakao 오픈 API 이용 및 테스트</li>
+</ul>
+
+<ol>
+  <li>kakao api 키 확인</li>
+</ol>
+<div class="post-container">
+    <img class="kakao1" src="/assets/kakaoApi1.png" />
+</div>
+
+<ol>
+  <li>postman으로 통신 확인</li>
+</ol>
+
+<p>-쿼리스트링 SET</p>
+
+<div class="post-container">
+    <img class="kakao2" src="/assets/kakaoApi2.png" />
+</div>
+
+<p>-키 값 SET</p>
+
+<div class="post-container">
+    <img class="kakao3" src="/assets/kakaoApi3.jpg" />
+</div>
+
+<p>-OUT 확인</p>
+
+<div class="post-container">
+    <img class="kakao4" src="/assets/kakaoApi4.png" />
+</div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">kakaoAuth</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span> <span class="c1">//kakao restApikey</span>
+<span class="kd">function</span> <span class="nx">loadDoc</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+    <span class="na">method</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="s2">"https://dapi.kakao.com/v2/search/image?"</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span> <span class="na">query</span><span class="p">:</span> <span class="s2">"가스공사"</span> <span class="p">},</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="na">Authorization</span><span class="p">:</span> <span class="s2">"KakaoAK "</span> <span class="o">+</span> <span class="nx">kakaoAuth</span> <span class="p">},</span>
+  <span class="p">})</span>
+    <span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">alert</span><span class="p">(</span><span class="s2">"Data Saved: "</span> <span class="o">+</span> <span class="nx">msg</span><span class="p">);</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+  </div><script>
+    console.log('sdgsdg22')
+  </script><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/kakaoApi/';
+      this.page.identifier = 'http://localhost:4000/kakaoApi';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://leejiwan.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+    <footer class="condensed">
+      <ul class="social about-footer condensed"><a href="https://github.com/leejiwan" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/category/Java/index.html">Java</a>
+          </li>
+          
+          <li>
+            <a href="/category/Javascript/index.html">Javascript</a>
+          </li>
+          
+          <li>
+            <a href="/category/Was/index.html">Was</a>
+          </li>
+          
+          <li>
+            <a href="/category/Interview/index.html">Interview</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        02 01  February, 2022</p>
+        <!-- weather-->
+      <div class="weather"></div>
+    </footer>
+  </main>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0WSKB02P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TH0WSKB02P');
+  </script>
+</body>
+
+</html>

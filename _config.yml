@@ -32,8 +32,8 @@ plainwhite:
       url: "/category/Was/index.html"
     - title: Interview
       url: "/category/Interview/index.html"
-    - title: Finance
-      url: "/category/Finance/index.html"
+  #    - title: Finance
+  #      url: "/category/Finance/index.html"
   condensed_mobile:
     #- home
     - page
