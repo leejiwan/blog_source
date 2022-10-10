@@ -1,0 +1,68 @@
+---
+layout: post
+title: "JSX"
+date: 2022-08-01 00:00:00 +0530
+categories: Javascript
+comments: true
+---
+
+1. 하나의 부모 Dom 트리 구조로 이루어져야함
+
+```javascript
+/*
+가능
+*/
+function test() {
+    return(
+        <div>
+            <div>할룽</div>
+            <div>할룽2</div>
+        </div>
+    )
+}
+
+
+/*
+불가능
+*/
+function test2() {
+    return(
+        <div>할룽</div>
+        <div>할룽2</div>
+    )
+}
+
+```
+
+2. html에 클래스 선언할 떄는 className
+
+```javascript
+function test() {
+  return (
+    <div className="test">
+      <div>할룽</div>
+      <div>할룽2</div>
+    </div>
+  );
+}
+```
+
+3. 변수를 html 넣을 떄는 {중괄호} 사용
+
+```javascript
+function test() {
+  let name2 = "할룽";
+  return (
+    <div className="test">
+      <div>{name2}</div>
+      <div>할룽2</div>
+    </div>
+  );
+}
+```
+
+4. html style 속성 넣을 떄는 style ={} 이렇게
+
+```javascript
+<div style={{ color: "blue", fontSize: "30px" }}> 글씨 </div>
+```
